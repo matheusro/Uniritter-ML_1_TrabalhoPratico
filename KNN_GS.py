@@ -22,6 +22,7 @@ grid_params = {'n_neighbors': [3,5,11,19],
                'metric': ['euclidean', 'manhattan']
                }
 gs = GridSearchCV(KNeighborsClassifier(),
+                  
                   grid_params,
                   verbose=1,
                   cv=10,
@@ -29,9 +30,10 @@ gs = GridSearchCV(KNeighborsClassifier(),
                   )
 
 gs_results = gs.fit(X,y)
-gs_results_estimator = gs_results.best_estimator_
+#gs_results_estimator = gs_results.best_estimator_
 gs_results_params = gs_results.best_params_
 
-print(gs_results)
-print(gs_results_estimator)
-print(gs_results_params)
+
+#print("Best KNN Estimator: {}".format(gs_results_estimator))
+print("Tuned Best KNN Parameters: {}".format(gs_results_params))
+print("Best KNN Score is {}".format(gs_results.best_score_))

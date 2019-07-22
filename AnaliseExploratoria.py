@@ -7,8 +7,6 @@ dataset = pd.read_csv('C:/dev/Uniritter_DS/MachineLearning_I/Uniritter-ML_1_Trab
 print("Amostra dos dados:")
 print(dataset.head())
 shape = dataset.shape
-print('\n')
-
 print("Total de Linhas e Colunas: ", shape)
 sumario = dataset.describe()
 print("Informações estatisticas do Dataset: ")
